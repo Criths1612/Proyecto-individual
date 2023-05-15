@@ -7,9 +7,9 @@ from sklearn.metrics.pairwise import linear_kernel, cosine_similarity
 import nltk
 import uvicorn
 
-
 app=fastapi.FastAPI()
-movies=pd.read_csv("movies_datasert2.csv")
+
+movies=pd.read_csv("./movies_dataset2.csv")
 
 @app.get('/peliculas_mes/{mes}')
 def peliculas_mes(mes):
